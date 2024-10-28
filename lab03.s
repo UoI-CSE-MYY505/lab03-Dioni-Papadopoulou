@@ -98,6 +98,10 @@ outShowRowLoop:
 # ----------------------------------------
 
 rgb888_to_rgb565:
+        add  t0, zero, zero # row counter
+rowLoop:
+        bge  t0, a2, outRowLoop
+        add  t1, zero, zero 
 # ----------------------------------------
 # Write your code here.
 # You may move the "return" instruction (jalr zero, ra, 0).
